@@ -16,14 +16,13 @@ int main(int argc, char **argv)
     wiek = 0; //inicjacja zmiennej
     
 	cout << "Witaj w C++" << endl;
-	cout << "Podaj imię: ";
+	cout << "Podaj imie: ";
     //cin >> imie;
     cin.getline(imie, 10);
-    cout << "Cześć, " << imie << "!" << endl;
-    cin.ignore(100, '/n');
+    cout << "Czesc, " << imie << "!" << endl;
     cout << "Ile masz lat? ";
     cin >> wiek;
-    cout << "Urodziłeś się w roku " << 2017 - wiek << endl;
+    cout << "Urodziles sie w roku " << 2017 - wiek << endl;
 	return 0;
 }
 
