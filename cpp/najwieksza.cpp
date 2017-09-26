@@ -14,17 +14,21 @@ int main(int argc, char **argv)
     
 	cout << "Podaj boki:" << endl;
     cin >> a >> b >> c;
-    if (a > b)
-    {
-        if (a > c)
-            cout << "Najwieksze jest a";
-        else
-            cout << "Najwieksze jest c";
-    } 
+    
+{    if (a > c)
+        {   if (a > b)
+                cout << "Najwieksze jest a";
+            else 
+               cout << "Najwieksze jest b";
+        }
     else
-    {
-        ; // a nie jest większe od b
-    }
+        {
+            if (c > b)
+                cout << "Najwieksze jest c";
+            else
+                cout << "Najwieksze jest b";
+        }
+}
 	return 0;
 }
 
