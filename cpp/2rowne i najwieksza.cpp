@@ -41,7 +41,7 @@ int main(int argc, char **argv)
     if ((b > c) && (b > a))
     {
         cout << "Najwieksze jest b" << endl;
-    
+        exit(0);
     }
     else
     if ((a > b) && (a > c))
