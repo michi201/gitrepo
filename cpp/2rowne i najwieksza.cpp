@@ -24,7 +24,7 @@ int main(int argc, char **argv)
     cin >> c;
   
 
-    if (!cin) // jeżeli wartość jest literą
+    if (!cin) // jeżeli wartość nie jest cyfrą
         {
          system( "cls" );
          cin.clear(); //czyści flagi błędów np. wyczyścić a="e" żeby mogło byc a=0                                
