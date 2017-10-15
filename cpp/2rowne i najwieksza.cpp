@@ -26,7 +26,7 @@ int main(int argc, char **argv)
 
     if (!cin) // jeżeli wartość nie jest cyfrą
         {
-         system( "cls" );
+         system( "clear" );
          cin.clear(); //czyści flagi błędów np. wyczyścić a="e" żeby mogło byc a=0                                
          cin.sync(); //czyści bufor
          cout << "Podales bledna wartosc, sprobuj ponownie" << endl;
