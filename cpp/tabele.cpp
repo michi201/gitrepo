@@ -4,31 +4,43 @@
 
 using namespace std;
 
+void pobierzliczby (int tab[], int ile)
+{
+    int i;
+    for (i = 0; i < ile; i++)
+    {
+        cout << "Podaj liczbe: " <<endl;
+        cin >> tab[i];
+    }
+    
+}
+void sumuj (int liczby[], int ilosc)
+{
+    int i;
+    int suma = 0;
+    for (i = 0; i < ilosc ; i++)
+    { 
+        suma+= liczby[i];
+    }
+    cout << "Suma liczb: " << suma << endl;
+}
+
+void najmniejsza (int tab[], int ilosc)
+{
+    ; // funkcja znajduje i drukuje najmniejsza liczbe z tabeli
+}
 
 int main(int argc, char **argv)
 {
-	int liczby [10];
-    int i;
-    int suma = 0;
-    int ilosc = 0;
+    int rozmiar = 0;
+    cout << "Podaj ilość liczb: " << endl;
+    cin >> rozmiar;
     
-    for (i = 0; i < 10; i++)
-    {
-        cout << "Podaj liczbe: " <<endl;
-        cin >> liczby[i];
-    }
+	int liczby [rozmiar];
     
-   for (i = 0; i < 10; i++)
-    { 
-        suma+= liczby[i];
-            if ( i % 2 == 0)
-                ilosc++;
-    }
-
-    cout << "Suma liczb: " << suma << endl;
-
+    pobierzliczby(liczby, rozmiar);
     
-    cout << ilosc;
+    sumuj(liczby, rozmiar);
     
 	return 0;
 }
