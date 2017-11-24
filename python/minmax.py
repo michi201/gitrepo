@@ -25,11 +25,25 @@ def minimum(lista):
     # wyszukiwanie minimum
     min = lista[0]
     for i, el in enumerate(lista):
-    return 0
+      if el < min:
+        min = el
+    return min
+
+
+def maximum(lista):
+    # wyszukiwanie minimum
+    max = lista[0]
+    for i, el in enumerate(lista):
+      if el > max:
+        max = el
+    return max
 
 def main(args):
-    lista = losuj(20, 50)
-    print("Min: ", minium(lista))
+    lista = losuj(10, 50)
+    assert minimum([7, 5, 2, 1, 7]) == 1
+    assert maximum([7, 5, 2, 1, 7]) == 7
+    print("Min: ", minimum(lista))
+    print("Max: ", maximum(lista))
     return 0
 
 
