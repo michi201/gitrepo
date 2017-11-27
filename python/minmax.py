@@ -25,8 +25,8 @@ def minimum(lista):
     # wyszukiwanie minimum
     min = lista[0]
     for i, el in enumerate(lista):
-      if el < min:
-        min = el
+        if el < min:
+            min = el
     return min
 
 
@@ -37,6 +37,7 @@ def maximum(lista):
       if el > max:
         max = el
     return max
+
 
 def main(args):
     lista = losuj(10, 50)
