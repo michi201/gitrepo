@@ -64,6 +64,7 @@ int main(int argc, char **argv)
     
     ile5 (liczby, rozmiar);
     
+    
 	return 0;
 }
 
