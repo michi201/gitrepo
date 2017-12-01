@@ -9,14 +9,15 @@
 
 using namespace std;
 
-int losuj(int ileliczb, int maxliczb)
+int losuj(int ileliczb, int maxliczb, int tab[])
 {
     int i, liczba;
     // int ile = 0; // ilośc unikalnych liczb
     srand(time(NULL)); // pobieranie czasu od 1970 do teraz
     for (i = 0; i < ileliczb; i++)
     {
-		liczba = rand()% 40 + 10; // funkcja losująca liczbę (przedział od 10 do 50)
+		liczba = rand()% 30 + 10; // funkcja losująca liczbę (przedział od 10 do 50)
+        tab[i] = liczba;
 		cout << liczba << endl;
     }
     return liczba;
@@ -46,8 +47,10 @@ int maximum(int tab[])
 
 int main(int argc, char **argv)
 {
-	int tab[losuj(10, 50)];
-	
+    int ile = 10;
+	int tab[ile];
+	losuj(ile, 40, tab);
+    
 	cout << "Min: "<< minimum(tab) << endl;
 	cout << "Max: " << maximum(tab) << endl;
 	
