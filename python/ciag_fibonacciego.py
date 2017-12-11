@@ -37,7 +37,7 @@ def main(args):
     # assert fib_iter(3) == 2
     # assert fib_iter(4) == 3
     # assert fib_iter(5) == 5
-    print("Wyraz {:d} = {:d}".format(n, fib_iter(n)))
+    print("Wyraz {:d} = {:d}".format(n, fib_rek(n)))
     return 0
 
 

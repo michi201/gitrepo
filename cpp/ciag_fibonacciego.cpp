@@ -26,12 +26,19 @@ int fib_iter(int n)
     return b;
 }
 
+int fib_rek(int n)
+{    
+	if (n < 2)
+        return 1;
+    return fib_rek(n - 1) + fib_rek(n - 2);
+}
+
 int main(int argc, char **argv)
 {
 	int n;
 	cout << "Numer wyrazu ciągu: " << endl;
 	cin >> n;
-	printf("Wyraz %d = %d", n, fib_iter(n));	
+	printf("Wyraz %d = %d", n, fib_rek(n));	
 	return 0;
 }
 
