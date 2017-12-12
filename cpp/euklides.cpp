@@ -18,6 +18,7 @@ int nwd_v1(int a, int b)
 	return a;
 }
 
+
 int main(int argc, char **argv)
 {
 	int a, b;

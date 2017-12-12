@@ -18,6 +18,11 @@ float horner_it(int stopien, float tb[], float x)
     return wynik;
 }
 
+/*float horner_rek(int stopien, float tb[], float x)
+{
+    if ()
+}*/
+
 
 int main(int argc, char **argv)
 {
