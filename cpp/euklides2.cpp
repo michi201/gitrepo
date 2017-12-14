@@ -17,6 +17,13 @@ int nwd_v2(int a, int b)
     return b;
 }
 
+int nwd_rek(int a, int b)
+{
+	if (b == 0)
+		return a;
+	return nwd_rek(b, a % b);
+}
+
 int main(int argc, char **argv)
 {
 	int a, b;
@@ -25,7 +32,7 @@ int main(int argc, char **argv)
 	cout << "Podaj liczbe naturalną: " << endl;
 	cin >> b;
 	// cout << "Największy wspólny dzielnik: " << nwd_v2(a, b) << endl;
-	printf("NWD(%d, %d) = %d", a, b, nwd_v2(a, b));	
+	printf("NWD(%d, %d) = %d", a, b, nwd_rek(a, b));	
 	return 0;
 }
 

@@ -12,9 +12,9 @@ def nwd_v2(a, b):
 
 
 def nwd_rek(a, b):
-        if b == 0:
-            return a
-        return nwd_rek(b, a % b)
+    if b == 0:
+        return a
+    return nwd_rek(b, a % b)
 
 def main(args):
     a = int(input("Podaj liczbe naturalną: "))

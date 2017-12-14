@@ -18,10 +18,12 @@ float horner_it(int stopien, float tb[], float x)
     return wynik;
 }
 
-/*float horner_rek(int stopien, float tb[], float x)
-{
-    if ()
-}*/
+float horner_rek(int stopien, float tb[], float x)
+{	
+	if (stopien == 0)
+		return tb[0];
+	return horner_rek(stopien - 1, tb, x) * x + tb[stopien];
+}
 
 
 int main(int argc, char **argv)
@@ -36,7 +38,7 @@ int main(int argc, char **argv)
         cout << "Podaj współczynnik: " << endl;
         cin >> tbwsp[i];
     }
-    cout << "Wynik: " << horner_it(stopien, tbwsp, x) << endl;
+    cout << "Wynik: " << horner_rek(stopien, tbwsp, x) << endl;
     
     return 0;
 }
