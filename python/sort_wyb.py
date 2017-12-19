@@ -2,14 +2,12 @@
 # -*- coding: utf-8 -*-
 #
 #  sort_wyb.py
-#  
+#
 
 import random
 
 
-def losuj(ileliczb, maksliczb):
-
-    liczby = []  # pusta lista
+def losuj(liczby, ileliczb, maksliczb):
 
     ile = 0  # ilość unikalnych liczb
 
@@ -23,33 +21,26 @@ def losuj(ileliczb, maksliczb):
     return liczby
 
 
-def zamien(a, b):
-   # tmp = a;
-    a = b
-   # b = tmp;
-   
-   
-def sort_wyb(tab, n):
+def sort_wyb(tab):
     # selection sort
-	tab = []
-	print(" ------------- Sortowanie przez wybieranie ---------------")
-	for i in range(1, n):
-		k = i
-		print(i)
-		for j in range(i + 1, n):
-			#print(j)
-			if tab[j] < tab[k]:
-				k = j
-        
-	# zamien(tab[i], tab[k])
+    print(" ------------- Sortowanie przez wybieranie ---------------")
+    for i in range(len(tab)):
+        k = i
+        for j in range(i + 1, len(tab)):
+            if tab[j] < tab[k]:
+                k = j
+        tab[i], tab[k] = tab[k], tab[i]
+    return tab
+
 
 def main(args):
     ile = 10
-    tab = [ile]
+    tab = []
     maksliczb = int(input('Podaj maksymalną liczbe: '))
-    print(losuj(ile, maksliczb))
-    print(sort_wyb(tab, ile))
+    print(losuj(tab, ile, maksliczb))
+    print(sort_wyb(tab))
     return 0
+
 
 if __name__ == '__main__':
     import sys

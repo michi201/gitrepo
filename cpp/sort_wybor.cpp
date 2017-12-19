@@ -42,7 +42,7 @@ void sort_wyb(int tab[], int n)
 	{
         min = i; // indeks pierwszego elementu w nieuporządkowanej tabeli
         for ( j = i + 1; j < n; j++)
-        {   cout << j << endl;
+        {
 			if(tab[j] < tab[min])
                 min = j;
         }
