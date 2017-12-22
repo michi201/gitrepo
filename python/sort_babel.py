@@ -21,15 +21,13 @@ def losuj(liczby, ileliczb, maksliczb):
     return liczby
 
 
-def sort_wyb(tab):
-    # selection sort
-    print(" ------------- Sortowanie przez wybieranie ---------------")
+def sort_babel(tab):
+    # bouble sort
+    print(" ------------- Sortowanie przez bąbelkowanie ---------------")
     for i in range(len(tab)):
-        k = i
-        for j in range(i + 1, len(tab)):
-            if tab[j] < tab[k]:
-                k = j
-        tab[i], tab[k] = tab[k], tab[i]
+        for j in range(len(tab) - 1):
+            if tab[j] > tab[j + 1]:
+                tab[j], tab[j + 1] = tab[j + 1], tab[j]
     return tab
 
 
@@ -38,7 +36,7 @@ def main(args):
     tab = [ile]
     maksliczb = int(input('Podaj maksymalną liczbe: '))
     print(losuj(tab, ile, maksliczb))
-    print(sort_wyb(tab))
+    print(sort_babel(tab))
     return 0
 
 
