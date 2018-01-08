@@ -33,6 +33,11 @@ def sort_wstaw(tab):
         tab[k + 1] = el
     return tab
 
+def sort_wstaw_bin(lista):
+    for i in range(1, len(lista)):
+        el = lista[i]
+        k = szukaj_bin(0, i, lista, el) # wyszuk. bin. indeksu wstawiania
+
 
 def main(args):
     ile = 10
