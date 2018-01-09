@@ -5,6 +5,7 @@
 #
 
 import random
+from math import floor
 
 
 def losuj(liczby, ileliczb, maksliczb):
@@ -33,10 +34,29 @@ def sort_wstaw(tab):
         tab[k + 1] = el
     return tab
 
+
+def szukaj_bin(lewy, prawy, lista, el):
+    """wersja liniowa wyszukiwania binarnego
+    wyszukujemy indeks do wstawiania elementu"""
+    while lewy < prawy:
+        srodek = floor((lewy + prawy) / 2)
+        if el <= lista[srodek]:
+            prawy = srodek
+        else:
+            lewy = srodek + 1
+    print(lewy)
+    return lewy
+
+
 def sort_wstaw_bin(lista):
+    print(" ------------- Sortowanie przez wstawianie binarne ---------------")
     for i in range(1, len(lista)):
         el = lista[i]
-        k = szukaj_bin(0, i, lista, el) # wyszuk. bin. indeksu wstawiania
+        print(el)
+        k = szukaj_bin(0, i, lista, el)  # wyszuk. bin. indeksu do wstawiania
+        lista = lista[:k] + [el] + lista[k:i] + lista[i + 1:]
+        print(lista)
+    return lista
 
 
 def main(args):
@@ -44,7 +64,7 @@ def main(args):
     tab = [ile]
     maksliczb = int(input('Podaj maksymalną liczbe: '))
     print(losuj(tab, ile, maksliczb))
-    print(sort_wstaw(tab))
+    print(sort_wstaw_bin(tab))
     return 0
 
 
