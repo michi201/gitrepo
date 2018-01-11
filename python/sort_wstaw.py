@@ -44,7 +44,6 @@ def szukaj_bin(lewy, prawy, lista, el):
             prawy = srodek
         else:
             lewy = srodek + 1
-    print(lewy)
     return lewy
 
 
@@ -52,8 +51,8 @@ def sort_wstaw_bin(lista):
     print(" ------------- Sortowanie przez wstawianie binarne ---------------")
     for i in range(1, len(lista)):
         el = lista[i]
-        print(el)
         k = szukaj_bin(0, i, lista, el)  # wyszuk. bin. indeksu do wstawiania
+        print(k)
         lista = lista[:k] + [el] + lista[k:i] + lista[i + 1:]
         print(lista)
     return lista
@@ -64,7 +63,7 @@ def main(args):
     tab = [ile]
     maksliczb = int(input('Podaj maksymalną liczbe: '))
     print(losuj(tab, ile, maksliczb))
-    print(sort_wstaw_bin(tab))
+    sort_wstaw_bin(tab)
     return 0
 
 

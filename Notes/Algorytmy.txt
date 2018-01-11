@@ -1,0 +1,12 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-01-11T08:35:49+01:00
+
+====== Algorytmy ======
+Created czwartek 11 styczeń 2018
+
+całkowita poprawnośc algorytmu - kiedy algorytm jest skończony i można przeprowadzić test dla wszystkich możliwych danych
+
+częściowa poprawność algorytmu - kiedy nie możno przeprowanić testu dla wszystkich mozliwych danych
+
+indukcja(wnioskowanie indukcyjne) - po przetestowniu przypadków jednostkowych, założenie że dany algorytm jest poprawny / sprawdzanie pewnego zakresu i odniesienie sie na jego podstawie do całosci
