@@ -10,3 +10,9 @@ całkowita poprawnośc algorytmu - kiedy algorytm jest skończony i można przep
 częściowa poprawność algorytmu - kiedy nie możno przeprowanić testu dla wszystkich mozliwych danych
 
 indukcja(wnioskowanie indukcyjne) - po przetestowniu przypadków jednostkowych, założenie że dany algorytm jest poprawny / sprawdzanie pewnego zakresu i odniesienie sie na jego podstawie do całosci
+
+złozonośc pamięciowa - mówi nam jak duzo pamięci potrzebuje program do działania
+
+złozonośc czasowa - przy złożoności czasowej nie bierzemy pod uwagę realnego czasu wykonywania programu, ale liczbe operacji podstawowych do zakończenia programu
+
+operacja podstawowa - operacja najczęściej wykonywania w programie
