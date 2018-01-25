@@ -1,0 +1,14 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-01-25T08:31:10+01:00
+
+====== System ósemkowy ======
+Created czwartek 25 styczeń 2018
+
+System ósemkowy:
+
+119 / 8 = 14 r 7
+14 / 8 = 1 r 6
+1 / 8 = 0 r 1
+
+167 → 64 + 48 + 7 → 119

@@ -1,0 +1,25 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-01-25T08:11:05+01:00
+
+====== Systemy liczbowe ======
+Created czwartek 25 styczeń 2018
+
+129 / 2 = 64 reszty 1
+64 / 2 = 32 reszty 0
+32 / 2 = 16 reszty 0
+16 / 2 = 8 reszty 0
+8 / 2 = 4 reszty 0
+4 / 2 = 2 reszty 0
+2 / 2 = 1 reszty 0
+1 / 2 = 0 reszty 1
+
+Pierwszą liczbe podnosimy do potęgi 2 do n - 1, kolejne do 2 do n -2, n -3, ... a ostatnią do 2 do 0:
+np.
+1 * 2 do 7 + 1 + 2 do 0
+10000001 → 128 + 1 --> 129
+
+Aby zamienic liczbe w systemie binarnym na liczbe w systemie ósemkowym lub szesnastkowym najpierw należy od prawej strony podzielić te liczby grupami - po tyle liczb ile wynosi potęga systemu (odpowiednio: ósemkowy 2 do 3, szesnastkowy 2 do 4) następnie sumujemy potęgi 2 na danej pozycji od prawej strony np.
+
+11110111 na system szesnastkowy:
+1111   0111 → (2^0 + 2^1 + 2^2) + (2^0 + 2^1 + 2^2 + 2^3) → 7 + 15 → F7      (brak liczby 15 w systemie szesnastkowym, zastąpiona jest literą)
