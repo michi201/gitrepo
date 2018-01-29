@@ -9,3 +9,6 @@ Created czwartek 25 styczeń 2018
 7 / 16 = 0 r 7
 
 77 → 7 * 16 + 7 → 119
+
+11110111 na system szesnastkowy:
+1111   0111 → (2^0 + 2^1 + 2^2) + (2^0 + 2^1 + 2^2 + 2^3) → 7 + 15 → F7      (brak liczby 15 w systemie szesnastkowym, zastąpiona jest literą)

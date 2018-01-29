@@ -21,5 +21,3 @@ np.
 
 Aby zamienic liczbe w systemie binarnym na liczbe w systemie ósemkowym lub szesnastkowym najpierw należy od prawej strony podzielić te liczby grupami - po tyle liczb ile wynosi potęga systemu (odpowiednio: ósemkowy 2 do 3, szesnastkowy 2 do 4) następnie sumujemy potęgi 2 na danej pozycji od prawej strony np.
 
-11110111 na system szesnastkowy:
-1111   0111 → (2^0 + 2^1 + 2^2) + (2^0 + 2^1 + 2^2 + 2^3) → 7 + 15 → F7      (brak liczby 15 w systemie szesnastkowym, zastąpiona jest literą)
