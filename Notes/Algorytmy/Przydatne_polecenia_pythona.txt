@@ -1,0 +1,22 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-01-30T10:02:57+01:00
+
+====== Przydatne polecenia pythona ======
+Created wtorek 30 styczeń 2018
+
+(lista).append(to co ma byc dodane) - dodawanie do listy
+
+(lista).reverse() - odwrócenie kolejności
+
+"".join(lista)  - złączenie elementów listy w 1 ciąg tekstowy
+
+parametr.isdigit() - sprawdzanie czy dany parametr jest liczbą
+
+len(lista) - pokazuje ilośc elementów listy
+
+ord("LITERA") - zamiast litery pokazuje liczbe kodu ASCII
+
+chr(liczba ACII) - zamiast liczby ASCII pokazuje odpowiadającą tej liczbie literę
+
+argument.upper() - jeżeli argument jest literą, to następuje zamiana małej litery na dużą (jezeli jest duża to nic sie nie zmienia) 
