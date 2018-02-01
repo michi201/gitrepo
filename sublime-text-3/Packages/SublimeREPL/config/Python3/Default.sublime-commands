@@ -1,0 +1,38 @@
+[
+    {
+        "caption": "SublimeREPL: Python3",
+        "command": "run_existing_window_command", "args":
+        {
+            "id": "repl_python3",
+            "file": "config/Python3/Main.sublime-menu"
+        }
+    },
+    {
+        "caption": "SublimeREPL: Python3 - PDB current file",
+        "command": "run_existing_window_command", "args":
+        {
+            "id": "repl_python_pdb3",
+            "file": "config/Python3/Main.sublime-menu"
+        }
+    },
+    {
+        "caption": "SublimeREPL: Python3 - RUN current file",
+        "command": "run_existing_window_command", "args":
+        {
+            "id": "repl_python_run3",
+            "file": "config/Python3/Main.sublime-menu"
+        }
+    },
+    {
+        "command": "python_virtualenv_repl3",
+        "caption": "SublimeREPL: Python3 - virtualenv"
+    },
+    {
+        "caption": "SublimeREPL: Python3 - IPython",
+        "command": "run_existing_window_command", "args":
+        {
+            "id": "repl_python_ipython3",
+            "file": "config/Python3/Main.sublime-menu"
+        }
+    }
+]
