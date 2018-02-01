@@ -1,0 +1,27 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-02-01T08:20:10+01:00
+
+====== Kompresja ======
+Created czwartek 01 luty 2018
+
+Algorytm kompresji słownikowej
+
+The rain in Spain falls mainly on the plain.
+The rain <3,3>Sp<9, 4> falls m<11;3>ly on t<34,3>pl<15; 3>.
+
+Pierwsza liczba to odległość od wcześniejszego powtórzenia (ilośc znaków), druga liczba to informacja ile znakow bierzemy z oryginalnego ciągu
+
+6 bitów + 2 bity = 8bitów
+
+Współczynnik kompresji:
+33 bajty / 44 bajty  * 100 = 75%
+
+Rc = Vk / Vnk * 100
+100 % - Rc = o ile procent zmniejszyl sie kompresowany plik
+
+Rc - współczynnik kompresji
+Vk - wielkośc skompresowana
+Vnk - wielkość nieskomopresowana
+
+Im mniejszy współczynnik kompresji tym lepiej
