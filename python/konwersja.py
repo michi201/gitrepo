@@ -28,13 +28,13 @@ def dec2other():
 
 def konwersja2(liczba, podstawa):
     """Funkcja konwertuje podaną liczbe w systemie o podanej podstawie
-     na system dziesiętny"""
+    na system dziesiętny"""
 
-     # 745(8) = 7 * 8^2 + 4 * 8^1 + 5
+    # 745(8) = 7 * 8^2 + 4 * 8^1 + 5
 
-     liczba10 = 0  # wartośc dziesiętna liczby
-     potega = len(liczba) - 1
-     for cyfra in liczba:
+    liczba10 = 0  # wartość dziesiętna liczby
+    potega = len(liczba) - 1
+    for cyfra in liczba:
         if not cyfra.isdigit():
             liczba10 += (ord(cyfra.upper()) - 55) * (podstawa ** potega)
         else:
@@ -45,26 +45,29 @@ def konwersja2(liczba, podstawa):
 
 def other2dec():
     """ Funkcja pobiera od uzytkownika podstawe i liczbe """
-    podstawa = int(input("Podaj liczbe: "))
-    liczba = input("Podaj podstawe: ")
+    liczba = input("Podaj liczbe: ")
+    podstawa = int(input("Podaj podstawe: "))
     for i in liczba:
         if i.isdigit():
             cyfra = int(i)
         else:
-                cyfra = ord(i.upper()) - 55
+            cyfra = ord(i.upper()) - 55
         if cyfra > podstawa - 1:
+            print("Podałeś niedopuszczalną liczbę!")
 
-    print(konwersja2())
+    print("Wynik konwersji: {}(10)".format(konwersja2(liczba, podstawa)))
 
 
 def main(args):
     print("Zamiana liczby dziesiętnej na liczbę o podanej podstawie "
-          "<2;16> lub odwrotnie")
+          "<2;16>")
     dec2other()
-    othet2dec()
+    print("Zamiana liczby o podanej podstawie <2;16> na liczbe "
+            "dziesiętną")
+    other2dec()
     return 0
 
 
 if __name__ == '__main__':
     import sys
-    sys.exit(main(sys.argv))
+sys.exit(main(sys.argv))
