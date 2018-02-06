@@ -25,3 +25,5 @@ Vk - wielkośc skompresowana
 Vnk - wielkość nieskomopresowana
 
 Im mniejszy współczynnik kompresji tym lepiej
+
+archiwum - kopia czegos

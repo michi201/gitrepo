@@ -19,4 +19,8 @@ ord("LITERA") - zamiast litery pokazuje liczbe kodu ASCII
 
 chr(liczba ACII) - zamiast liczby ASCII pokazuje odpowiadającą tej liczbie literę
 
-argument.upper() - jeżeli argument jest literą, to następuje zamiana małej litery na dużą (jezeli jest duża to nic sie nie zmienia) 
+argument.upper() - jeżeli argument jest literą, to następuje zamiana małej litery na dużą (jezeli jest duża to nic sie nie zmienia)
+
+argument.lower() - jeżeli argument jest literą, to następuje zamiana dużej litery na małą (jezeli jest mała to nic sie nie zmienia)
+
+for (znak) in (tekst) - pokazuje wszystkie znaki w tekście

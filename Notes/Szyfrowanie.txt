@@ -1,0 +1,10 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-02-06T10:03:21+01:00
+
+====== Szyfrowanie ======
+Created wtorek 06 luty 2018
+
+Szyfrowanie - ukrycie danych
+
+deszyfracja - odczytywanie zaszyfrowanych plików
