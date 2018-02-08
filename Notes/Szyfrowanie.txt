@@ -8,3 +8,5 @@ Created wtorek 06 luty 2018
 Szyfrowanie - ukrycie danych
 
 deszyfracja - odczytywanie zaszyfrowanych plików
+
+Przestawieniowe - Zapis tekstu w wierszach o ustalonej długości. Klucz to ilość kolumn na które dzielimy tekst
