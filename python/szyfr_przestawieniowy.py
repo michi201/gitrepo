@@ -18,6 +18,7 @@ def szyfruj(tekst, klucz):
 def deszyfruj(szyfrogram, klucz):
 
 
+
 def main(args):
     tekst = input("Podaj tekst: ")
     klucz = int(input("Klucz: "))
