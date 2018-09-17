@@ -1,0 +1,8 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-09-17T09:04:36+02:00
+
+====== Bazy danych ======
+Created poniedziałek 17 września 2018
+
+SQL (Structure Query Language) - język wykorzystywany przy bazach danych
