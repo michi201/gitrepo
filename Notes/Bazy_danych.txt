@@ -6,3 +6,14 @@ Creation-Date: 2018-09-17T09:04:36+02:00
 Created poniedziałek 17 września 2018
 
 SQL (Structure Query Language) - język wykorzystywany przy bazach danych
+
+Normalizacja - otymalizowanie tabeli
+
+Pierwsza postać normalna 1NF (atomowości danych) - 1 kolumna powinna przechowywać 1 typ informacji
+
+Druga postać normalna 2NF - podział tabel z 1 na wiele zgodnie z danymi dotyczącymi konkretnej klasy obiektów i łączenie tabel w relacje
+
+Trzecia postać normalna 3NF - usuwanie tego co da sie policzyć
+
+
+Klucz obcy ma mieć ta sama nazwę kolumny i ten san typ danych co klucz główny
