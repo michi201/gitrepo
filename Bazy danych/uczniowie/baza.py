@@ -27,10 +27,10 @@ def ile_kolumn(cur, tab):
 
 def main(args):
     # KONFIGURACJA
-    baza_nazwa = 'szkola'
-    tabele = ["nazwiska", "dane_osobowe", "oceny"]
-    rozszerzenie = '.txt'
-    naglowki = True
+    baza_nazwa = 'uczniowie'
+    tabele = ["uczniowie", "klasy", "przedmioty", "oceny"]
+    rozszerzenie = '.csv'
+    naglowki = False
     #############
     con = sqlite3.connect(baza_nazwa + '.db')
     cur = con.cursor()      # obiekt tzw. kursora
@@ -54,7 +54,6 @@ def main(args):
         ile = len(dane[0])
         cur.executemany('INSERT INTO ' + tab + ' VALUES(' +
                         ','.join(['?'] * ile) + ')', dane)
-
     con.commit()
     con.close()
     return 0
