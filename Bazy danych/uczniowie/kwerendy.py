@@ -7,13 +7,25 @@ import sqlite3
 
 def kwerenda1(cur):
     cur.execute("""
-        SELECT klasa, COUNT(nazwisko) AS ilu FROM klasy
-        INNER JOIN uczniowie ON klasy.id=uczniowie.id_klasa
-        GROUP BY klasa
-        ORDER BY ilu DESC
+        WITH srednie AS (
+            SELECT nazwisko, AVG(ocena) AS srednia, klasa FROM uczniowie
+            INNER JOIN oceny ON uczniowie.id=oceny.id_uczen
+            INNER JOIN klasy ON uczniowie.id_klasa=klasy.id
+            GROUP BY id_uczen
+            ORDER BY srednia DESC
+        ) SELECT AVG(srednia), klasa FROM srednie
+          GROUP BY klasa
     """)
+    # WITH srednie AS (
+    # SELECT nazwisko, imie, AVG(ocena) AS srednia FROM uczniowie
+    # INNER JOIN oceny ON uczniowie.id=oceny.id_uczen
+    # GROUP BY id_uczen
+    # ORDER BY srednia DESC
+    # ) SELECT COUNT(imie), nazwisko, srednia FROM srednie
+    # WHERE srednia > 3.8
+    #
     # SELECT klasa, COUNT(nazwisko) FROM klasy
-    # ORDER BY klasy ASC  (sortowanie rosnąco)
+    # ORDER BY klasy ASC/DESC  (sortowanie rosnąco/malejąco)
     # SELECT klasa, nazwisko, imie FROM klasy
     # INNER JOIN uczniowie ON klasy.id=uczniowie.id_klasa
     # WHERE klasa="1A"
