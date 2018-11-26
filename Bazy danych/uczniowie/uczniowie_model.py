@@ -18,14 +18,12 @@ class KlasaBaza(Model):
 
 
 class Klasa(KlasaBaza):
-    id = IntegerField(null=False)
     klasa = CharField(null=False)
     rok_naboru = IntegerField(null=False)
     rok_matury = IntegerField(null=False)
 
 
 class Uczen(KlasaBaza):
-    id = IntegerField(null=False)
     imie = CharField(null=False)
     nazwisko = CharField(null=False)
     plec = BooleanField()
@@ -37,7 +35,6 @@ class Uczen(KlasaBaza):
 
 
 class Przedmiot(KlasaBaza):
-    id = IntegerField(null=False)
     przedmiot = CharField(null=False)
     imie_naucz = CharField(null=False)
     nazwisko_naucz = CharField(null=False)
@@ -45,7 +42,6 @@ class Przedmiot(KlasaBaza):
 
 
 class Ocena(KlasaBaza):
-    id = IntegerField(null=False)
     data = DateField()
     id_uczen = IntegerField(null=False)
     id_przedmiot = IntegerField(null=False)
