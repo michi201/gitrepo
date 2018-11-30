@@ -19,35 +19,32 @@ class KlasaBaza(Model):
 
 class Klasa(KlasaBaza):
     klasa = CharField(null=False)
-    rok_naboru = IntegerField(null=False)
-    rok_matury = IntegerField(null=False)
+    rok_naboru = IntegerField(default=0)
+    rok_matury = IntegerField(default=0)
 
 
 class Uczen(KlasaBaza):
     imie = CharField(null=False)
     nazwisko = CharField(null=False)
-    plec = BooleanField()
-    id_klasa = IntegerField(null=False)
-    egz_hum = DecimalField(null=False, default=0)
-    egz_mat = DecimalField(null=False, default=0)
-    egz_jez = DecimalField(null=False, default=0)
-    id_klasa = ForeignKeyField(Klasa)
+    plec = IntegerField()
+    klasa = ForeignKeyField(Klasa, related_name='uczniowie')
+    egz_hum = DecimalField(default=0)
+    egz_mat = DecimalField(default=0)
+    egz_jez = DecimalField(default=0)
 
 
 class Przedmiot(KlasaBaza):
     przedmiot = CharField(null=False)
     imie_naucz = CharField(null=False)
     nazwisko_naucz = CharField(null=False)
-    plec_naucz = BooleanField()
+    plec_naucz = IntegerField()
 
 
 class Ocena(KlasaBaza):
-    data = DateField()
-    id_uczen = IntegerField(null=False)
-    id_przedmiot = IntegerField(null=False)
+    datad = DateField()
+    uczen = ForeignKeyField(Uczen, related_name='oceny')
+    przedmiot = ForeignKeyField(Przedmiot, related_name='oceny')
     ocena = DecimalField(null=False)
-    id_uczen = ForeignKeyField(Uczen)
-    id_przedmiot = ForeignKeyField(Przedmiot)
 
 
 def main(args):
