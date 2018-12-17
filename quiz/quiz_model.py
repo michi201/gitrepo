@@ -1,43 +1,29 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+#
+#  modele.py
 
-
-import os
 from peewee import *
 
+baza_plik = 'quiz.db'
+baza = SqliteDatabase(baza_plik)  # instancja bazy
 
-baza_nazwa = "quiz.db"
-baza = SqliteDatabase(baza_nazwa)
-
-
-# MODELE #
-
-class QuizBaza(Model):
+### MODELE #
+class BazaModel(Model):
     class Meta:
         database = baza
 
-
-class Kategoria(QuizBaza):
+class Kategoria(BazaModel):
     kategoria = CharField(null=False)
 
-
-class Pytanie(QuizBaza):
+class Pytanie(BazaModel):
     pytanie = CharField(null=False)
     kategoria = ForeignKeyField(Kategoria, related_name='pytania')
 
-
-class Odpowiedz(QuizBaza):
+class Odpowiedz(BazaModel):
     odpowiedz = CharField(null=False)
     pytanie = ForeignKeyField(Pytanie, related_name='odpowiedzi')
-    odpok = BooleanField(default=0)
-
-
-def main(args):
-    if os.path.exists(baza_nazwa):
-        os.remove(baza_nazwa)
-    baza.connect()  # łączenie z bazą
-    baza.create_tables([Kategoria, Pytanie, Odpowiedz])
-    return 0
+    odpok = IntegerField(default=0)
 
 
 if __name__ == '__main__':

@@ -31,13 +31,13 @@ def main(args):
     baza.connect()
     baza.create_tables([Kategoria, Pytanie, Odpowiedz])
 
-    # dane = {
-    #     Kategoria: "kategorie",
-    #     Pytanie: "pytania",
-    #     Odpowiedz: "odpowiedzi",
-    # }
+    dane = {
+        Kategoria: "kategorie",
+        Pytanie: "pytania",
+        Odpowiedz: "odpowiedzi",
+    }
 
-    # dodaj_dane(dane)
+    dodaj_dane(dane)
     baza.commit()
     baza.close()
     return 0
