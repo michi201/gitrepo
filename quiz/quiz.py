@@ -7,9 +7,13 @@ from flask import g
 from modele import *
 from views import *
 
+app.config.update(dict(
+    SECRET_KEY="fif9vguk"
+))
+
 
 @app.before_request
-def before_request:
+def before_request():
     g.db = baza
     g.db.connect()
 

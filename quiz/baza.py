@@ -2,11 +2,10 @@
 # -*- coding: utf-8 -*-
 #
 #  baza.py
-
+#  
 import os
 import csv
-from quiz_model import *
-
+from modele import *
 
 def czy_jest(plik):
     """ Funkcja sprawdza istnienie pliku na dysku """
@@ -20,14 +19,13 @@ def dane_z_pliku(nazwa_pliku, separator=','):
     dane = []  # pusta lista na dane
     if not czy_jest(nazwa_pliku):
         return dane
-
+    
     with open(nazwa_pliku, 'r', newline='', encoding='utf-8') as plik:
         tresc = csv.reader(plik, delimiter=separator)
         for rekord in tresc:
             rekord = [x.strip() for x in rekord]  # oczyszczamy dane
             dane.append(rekord)  # dodawanie rekordów do listy
     return dane
-
 
 def dodaj_dane(dane):
     for model, plik in dane.items():
@@ -38,13 +36,12 @@ def dodaj_dane(dane):
         with baza.atomic():
             model.insert_many(wpisy, fields=pola).execute()
 
-
 def main(args):
     if os.path.exists(baza_plik):
         os.remove(baza_plik)
     baza.connect()
     baza.create_tables([Kategoria, Pytanie, Odpowiedz])
-
+    
     dane = {
         Kategoria: 'kategorie',
         Pytanie: 'pytania',
@@ -55,7 +52,6 @@ def main(args):
     baza.commit()
     baza.close()
     return 0
-
 
 if __name__ == '__main__':
     import sys
