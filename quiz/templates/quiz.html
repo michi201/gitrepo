@@ -1,27 +1,8 @@
-<!DOCTYPE html>
-<html lang="pl">
-<!--
-   templates/quiz.html
--->
+{% extends "szablon.html" %}
+{% block tytul %}Quiz - lista pyań{% endblock %}
+{% block h1 %}Quiz - lista pyań{% endblock %}
 
-<head>
-<meta charset="utf-8" />
-    <title>Aplikacja QUIZ – odpowiedz na pytania</title>
-    <style type="text/css">
-        #menu li { display: inline; margin-left: 1em; }
-        ol.odpowiedzi { list-style-type: lower-alpha; }
-    </style>
-</head>
-
-<body>
-    <ul id="menu">
-        <li><a href="{{ url_for('hello') }}">Strona główna</a></li>
-        <li><a href="{{ url_for('lista') }}">Lista</a></li>
-        <li><a href="{{ url_for('quiz') }}">Quiz</a></li>
-    </ul>
-
-    <h1>Aplikacja QUIZ – odpowiedz na pytania</h1>
-    
+{% block tresc %}
     <form method="POST">
     <ol>
     {% for p in pytania %}
@@ -36,9 +17,7 @@
         </li>
     {% endfor %}
     </ol>
-    
+
     <input type="submit" value="Prześlij">
     </form>
-    
-</body>
-</html>
+{% endblock %}

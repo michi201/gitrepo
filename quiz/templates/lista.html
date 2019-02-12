@@ -1,31 +1,14 @@
-<!DOCTYPE html>
-<html lang="pl">
-<!--
-   templates/lista.html
--->
+{% extends "szablon.html" %}
+{% block tytul %}Quiz - lista pyań{% endblock %}
+{% block h1 %}Quiz - lista pyań{% endblock %}
 
-<head>
-<meta charset="utf-8" />
-    <title>Aplikacja QUIZ – lista pytań</title>
-    <style type="text/css">
-        #menu li { display: inline; margin-left: 1em; }
-    </style>
-</head>
-
-<body>
-    <ul id="menu">
-        <li><a href="{{ url_for('hello') }}">Strona główna</a></li>
-        <li><a href="{{ url_for('lista') }}">Lista</a></li>
-        <li><a href="{{ url_for('quiz') }}">Quiz</a></li>
-    </ul>
-
-    <h1>Aplikacja QUIZ – lista pytań</h1>
-
+{% block tresc %}
     <ol>
     {% for p in pytania %}
-        <li>{{ p.pytanie }}</li>
+        <li>{{ p.pytanie }}
+            <a href="{{ url_for('edytuj', pid=p.id) }}" class="btn btn-secondary btn-sm"> Edytuj</a>
+            <a href="{{ url_for('usun', pid=p.id) }}" class="btn btn-danger btn-sm"> Usuń</a>
+        </li>
     {% endfor %}
     </ol>
-
-</body>
-</html>
+{% endblock %}
