@@ -27,8 +27,6 @@ int liczZnaki(char nazwa[]) {
             ile++;
             wyjscie.put(znak); // zapisanie znaku do pliku
         }
-        if ((int)znak == 10)
-            wyjscie.put('\n');
     }
     wejscie.close(); wyjscie.close();
     cout << "Znaków: " << ile << endl;
