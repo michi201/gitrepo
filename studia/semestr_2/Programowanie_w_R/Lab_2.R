@@ -1,4 +1,5 @@
-#LLabolatorium nr 2
+#Labolatorium nr 2
+#ZADANIA LABOLATORYJNE
 # Zad 1
 v11 <- rep_len(c(-1,1), 30)
 v11
@@ -79,5 +80,62 @@ rev(vi65)
 sample(v57)
 
 ostEl <- v57[c((length(v57)-3):length(v57))]
-v68 <- sample(ostEl, 100, TRUE)
+v68 <- sample(ostEl, 100, TRUE)*
 v68
+
+#ZADANIA PROJEKTOWE
+# Zad 1
+w11 <- seq(from = 7, to = exp(5), length.out=73)
+w11
+
+w12 <- rep_len(c(-1,-1,-1,-1,0,0,0,0), 100)
+w12
+
+w13a <- rep(1:50, each=2, length.out=100)
+w13b <- rep_len(c(-2,-2,1,2), 100)
+w13 <- w13b ^ w13a
+w13
+
+A <- c(2,56,3,6,5,3,2,8,19,-12)
+B <- c(4,2,59,-23,-2,43,24,6,9,10)
+v57 <- c(A,B)
+w14 <- v57[(v57 %% 2 == 0 & v57 > 7)]
+w14
+
+w15 <- v57
+w15[(v57 < 0 | v57 > 10)] = which(v57 < 0 | v57 > 10)
+w15
+
+# Zad 2
+x <- seq(0, 3*pi)
+y <- (cos(x^(5/3)) / ((x^2/7) +1))
+plot(x,y,type="l")
+
+# Zad 3
+prz <- c(-4:4)
+plot(prz, (exp((-prz^2)/2) / sqrt(2*pi)), type="l")
+
+# Zad 4
+w41 <- c(NA, 5 ,-1, NA, 4, 0 ,-5,1)
+length(w41[!is.na(w41) & w41 < 0]) # jeśli różne od 0 to są wartości ujemne
+
+length(w41[is.na(w41)])
+
+dodatnie <- length(w41[!is.na(w41) & w41 > 0])
+dodatnie / 3
+
+#Zad 5
+wT <- rnorm(1000) 
+a <- wT^2
+b <- wT^4
+r <- sum( ((a - mean(a) * (b - mean(b))) / (sd(a)*sd(b))) ) / (length(wT) - 1)
+r         
+
+#Zad 6
+n <- c(1:30)
+ciag <- n^2 - (n^4/900) - sqrt(n+5)
+cumsum(ciag) #skumulowana suma
+diff(ciag) #skumulowana różnica
+cumprod(ciag) #skumulowany iloczyn
+cummin(ciag) #minimum
+cummax(ciag) #maximum
